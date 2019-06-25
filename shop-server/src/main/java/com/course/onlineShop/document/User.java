@@ -43,6 +43,7 @@ public class User extends DateAudit {
     private String password;
 
     @DBRef(lazy = true)
+    @Size(min = 1)
     private List<Role> roles ;
 
     public User(String name, String username, String email,String password,  List<Role> roles) {
